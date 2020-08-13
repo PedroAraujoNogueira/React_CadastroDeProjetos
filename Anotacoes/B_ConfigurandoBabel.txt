@@ -1,0 +1,12 @@
+- Babel(Transpilador javascript)
+
+1. O browser não entende todo esse código gerado pelo React(HTML e CSS dentro do JavaScript), logo o Babel funciona como um transpilador que converte o código do React para um formato que o browser entenda. 
+
+2. O Babel converte nosso código JavaScript de uma forma que o browser entenda. Por exemplo: o browser ainda não entende o import e o export usado no JavaScript, então o Babel vai transformar esse código de uma forma que o browser entenda.
+
+3. Tirado da internet: 
+Muitas vezes o desenvolvedor deseja utilizar o que há de mais moderno na linguagem JavaScript, mas se frustra pela ausência de suporte nos navegadores ou na plataforma Node.js. A boa notícia é que podemos gerar um código compatível através de Babel, o compilador/transpilador JavaScript mais utilizado pela comunidade. 
+
+4. Criaremos um arquivo chamado babel.config.js que é onde ficarão as configurações relacionadas ao babel. Para ver mais possíveis configurações do Babel poderemos ir na documentação do Babel.
+
+5. Presets são conjuntos de configurações criados por terceiros que podemos reutilizar.

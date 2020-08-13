@@ -1,0 +1,1 @@
+https://overreacted.io/pt-br/how-are-function-components-different-from-classes/

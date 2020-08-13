@@ -1,0 +1,57 @@
+https://pt.stackoverflow.com/questions/213910/javascript-diferen%C3%A7as-entre-import-e-require
+
+Diferença entre require e import. O link acima tem todo o conteúdo abaixo.
+
+Essas ferramentas pertencem a gerações diferentes.
+
+O require existe só em CommonJS (a maneira que o Node.js criou para importar e exportar modulos dentro de uma aplicação), e o import é ES6, ou seja uma nova ferramenta que ambos JavaScript do browser e JavaScript do servidor (Node.js) podem usar.
+
+Para além dessa diferença histórica há diferenças de utilização, onde o import é mais flexivel, moderno e poderoso que o require.
+
+É importante contudo ter em conta que alguns browsers ainda não suportam ES6, por isso pode ser preciso compilar antes de usar.
+
+O require usa module.exports, que é a sintaxe "antiga" (mas ainda válida) para exportar um módulo, e que pode ser o que quisermos, um objeto, uma string, etc.
+
+O import usa ambos, ou seja podes usar module.exports e export, e permite exportar vários pedaços de código mais ou menos como o module.export fazia. Uma das vantagens do import é que pode importar só partes do que foi exportado:
+
+Exemplos:
+
+FICHEIRO QUE EXPORTA:
+
+// ficheiro A.js
+
+// sintaxe CommonJS
+module.exports = {
+    foo: function(){ return 'bar';},
+    baz: 123
+}
+
+// sintaxe ES6
+export function foo(){ return 'bar';}
+export const baz = 123;
+
+// ou
+
+function foo(){ return 'bar';}
+const baz = 123;
+
+export default {foo, baz};
+
+FICHEIRO QUE importa:
+
+// ficheiro B.js
+
+// sintaxe CommonJS
+const A = require('./A.js');
+const foo = A.foo;
+const baz = A.baz;
+
+// sintaxe ES6
+import * as A from './A.js';
+const foo = A.foo;
+const baz = A.baz;
+
+// ou somente
+import {foo, baz} from './A.js';
+
+Quando usas export default (sintaxe ES6) isso implica que só exportas uma coisa por ficheiro. Se for um objeto o import pode importar só pedaços, mas se for uma função por exemplo então podes usar somente import foo from './A.js'; sem precisar de {} ou * as foo.

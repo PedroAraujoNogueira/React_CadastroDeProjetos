@@ -1,0 +1,35 @@
+- O QUE É O REACT?
+
+1. O React é uma biblioteca para a construção de interfaces e componentização.
+2. O React é utilizado para construção de Single Page Applications(SPA). Ou seja, toda a aplicação é uma página só e a página nunca recarrega.
+3. Tudo fica dentro do JavaScript, ou seja, CSS, HTML e imagens, tudo dentro do JavaScript.
+
+- VANTAGENS
+
+1. Organização do código.
+    1.1. Componentização.
+2. Divisão de responsabilidades. 
+    2.1. Back-End: Regra de negócios(Calculos, integrações com meio de pagamento, acesso ao banco de       dados e etc).
+    2.2. Front-End: Interface, sem responsabilidade pelas regras de negócio.
+3. Uma API, com múltiplos clientes.
+4. Programação declarativa.
+
+- JSX
+
+1. Permite escrever HTML dentro do JavaScript.
+2. Com React podemos criar nossos próprios elementos.
+
+- Babel(Transpilador javascript)/ Webpack
+
+1. O browser não entende todo esse código gerado pelo React(HTML e CSS dentro do JavaScript). 
+2. O Babel converte nosso código JavaScript de uma forma que o browser entenda. Por exemplo: o browser ainda não entende o import e o export usado no JavaScript, então o Babel vai transformar esse código de uma forma que o browser entenda.
+   Tirado da internet: Muitas vezes o desenvolvedor deseja utilizar o que há de mais moderno na linguagem JavaScript, mas se frustra pela ausência de suporte nos navegadores ou na plataforma Node.js. A boa notícia é que podemos gerar um código compatível através de Babel, o compilador JavaScript mais utilizado pela comunidade. 
+3. O Webpack possui várias funções:
+    3.1. Criação do bundle, ou seja, arquivo com todo código JavaScript da aplicação.
+    3.2. Ensinar ao JavaScript como importar arquivos CSS, imagens e etc.
+    3.3. Live reload com Webpack Dev Server.
+
+- Principais características do React:
+1. Componentização.
+2. Propriedades.
+3. Estados e Imutabilidade: o estado permite que o valor de variáveis sejam monitorados e caso haja alteração na variável monitorada então aquele componente é renderizado novamente acrescentando as mudanças. 

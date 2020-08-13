@@ -1,0 +1,43 @@
+Comandos:
+
+1. Para começar um projeto com npm use o comando "yarn init -y" ou "npm init -y", esse comando irá gerar seu package.json, então a partir de agora será possível importarmos bilbiotecas, ferramentas e módulos através do npm ou yarn e essas bibliotecas ficaram registradas no package.json. A flag -y serve para responder automaticamente todas as perguntas que viriam após esse comando e essa flag não deve ser usada para projetos reais. 
+
+2. yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli -D
+A flag -D significa que essas bibliotecas serão instaladas como dependencias de desenvolvimento(devDependencies no package.json).
+
+@babel/core: esse pacote sempre deverá ser adicionado, pois é o “core” ou “centro” do babel
+
+@babel/preset-env: esse módulo que instalaremos é o @babel/preset-env. Ele é um módulo especial que compilará nosso código para uma versão anterior do ECMASCRIPT caso o recurso que estejamos utilizando não seja suportado pelos navegadores do mercado.
+
+@babel/preset-react: vai basicamente transformar as coisas que o navegador nao entende do react, como o JSX por exemplo, em coisas que o navegador consiga entender.
+
+3. yarn add react react-dom. Adiciona as bibliotecas do react e react-dom. 
+react: todo lugar onde formos usar a sintaxe JSX teremos que fazer import nele, ou seja, import React from 'react'
+react-dom: é o React usado para manipular a Web.
+
+4. yarn add babel-loader -D. Usado para carregar o babel e conseguentemenete os arquivos JS.
+
+5. yarn build. Usado para fazer o build, ou seja, pegar o arquivo JS e converter para uma forma que o navegador entenda. Após rodar esse comando ele irá criar um arquivo bundle.ls(ou qualquer nome que voce escolher) no local configurado por voce no webpack.config.js 
+
+6. yarn add webpack-dev-server -D. Identifica alteraçoes no código JavaScrips e recarrega a página automaticamente. Ele cria um servidor que roda por padrão na porta 8080. Caso não instalemos ele, para iniciarmos nosso projeto teriamos que rodar o comando "yarn webpack --mode development" e ir na pasta onde está nosso arquivo .html e dar dois clicks nele, ou seja, fazendo da forma mais antiga. Porém após cada alteração no código teriamos que rodar o comando "yarn webpack --mode development" novamente para ele gerar o bundle.js atualizado com as alterações que fizemos, pois por padrão ele não atualiza as alterações automaticamente. Para atualizar alterações automaticamente devemos instalar o webpack-dev-server. Após instalarmos o servidor webpack-dev-server temos que ir no arquivo de configuração do webpack(webpack.config.js) e adicionarmos:
+devServer: {
+    contentBase: path.resolve(__dirname, 'public') // É onde ele irá encontrar o index.html
+}, 
+E então podemos rodar o comando "yarn webpack-dev-server --mode development".
+
+7. yarn add style-loader css-loader -D. 
+style-loader: serve para importarmos arquivos css para dentro do nosso arquivo html, como se ele estivesse em uma tag style dentro do nosso html.
+css-loader: serve para o webpack entender importações de outros arquivo dentro do arquivo css. 
+
+8. yarn add file-loader -D
+file-loader: serve para conseguirmos importarmos arquivos de imagem na nossa aplicação.
+
+9. yarn add @babel/plugin-proposal-class-properties -D
+@babel/plugin-proposal-class-properties: esse plugin serve para que o babel consiga entender as propriedades de estado da class sem que estejam dentro de um constructor. Olhar arquivo TechList.js
+
+10. yarn add prop-types. 
+prop-types: essa biblioteca vai ser responsável por especificar e verificar o tipo das props que estão sendo passadas para o componente.
+
+11. yarn add axios. O axios vai ser o responsável por fazer as chamadas as APIs, conectando o front-end ao back-end.
+
+12. yarn add @babel/plugin-transform-runtime -D. Esse plugin vai permitir usarmos o async/await. Após rodarmos o comando precisamos adicionar  '@babel/plugin-transform-runtime' aos plugins do babel.config.js.

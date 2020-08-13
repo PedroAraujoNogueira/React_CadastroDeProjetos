@@ -1,0 +1,6 @@
+O Webpack faz com que para cada tipo de arquivo (.js, .css, .png) eu consiga converter o código de uma maneira diferente. Para isso usamos os loaders que convertem determinados tipos de arquivos como o.css(css-loader) e o .png(image-loader) para uma maneira que o browser entenda. 
+
+O Webpack possui várias funções:
+    3.1. Criação do bundle, ou seja, arquivo com todo código JavaScript da aplicação.
+    3.2. Ensinar ao JavaScript como importar arquivos CSS, imagens e etc.
+    3.3. Live reload com Webpack Dev Server, que vai servir para, através do webpack-dev-server, ele criar um servidor que vai atualizar e recarregar a página ao fazermos qualquer alteração no código.
