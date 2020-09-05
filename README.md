@@ -1,6 +1,6 @@
 # Cadastro de Projetos feito em React.  
 ### Como executar o projeto:  
--> Digito no terminal o comando **yarn add** para baixar todas as dependências do projeto.  
+-> Digito no terminal o comando **yarn install** para baixar todas as dependências do projeto.  
 -> Digite no terminal **yarn dev** para executar o projeto com o nodemon.  
 -> Baixar o projeto Back-end <https://github.com/PedroAraujoNogueira/Node_CadastroDeProjetos> e executá-lo conforme está descrito no **README.md** do projeto back-end.     
 
